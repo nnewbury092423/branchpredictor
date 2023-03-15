@@ -51,6 +51,9 @@ extern int verbose;
 //    Predictor Function Prototypes   //
 //------------------------------------//
 
+int stateinterpret();
+
+
 // Initialize the predictor
 //
 void init_predictor();

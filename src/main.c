@@ -82,8 +82,9 @@ main(int argc, char *argv[])
 {
   // Set defaults
   stream = stdin;
-  bpType = STATIC;
+  bpType = CUSTOM;
   verbose = 0;
+  printf("hello");
 
   // Process cmdline Arguments
   for (int i = 1; i < argc; ++i) {
@@ -109,6 +110,8 @@ main(int argc, char *argv[])
   uint32_t mispredictions = 0;
   uint32_t pc = 0;
   uint8_t outcome = NOTTAKEN;
+
+
 
   // Reach each branch from the trace
   while (read_branch(&pc, &outcome)) {
