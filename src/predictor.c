@@ -62,7 +62,6 @@ make_prediction(uint32_t pc)
   //
   //TODO: Implement prediction scheme
   //
-
   // Make a prediction based on the bpType
   switch (bpType) {
     case STATIC:
