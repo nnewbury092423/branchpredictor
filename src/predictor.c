@@ -441,7 +441,7 @@ void train_predictor(uint32_t pc, uint8_t outcome)
     }
     else
     {
-      chooser[address] = chooser[address]+ 2 * outcome - 1;
+      chooser[address] = chooser[address]+ 2*outcome - 1;
 
       if (chooser[address] == 6)
       {
@@ -454,7 +454,7 @@ void train_predictor(uint32_t pc, uint8_t outcome)
     }
 
     // update global history
-    history = history << 1 + outcome;
+    history = (history << 1) + outcome;
     history = history & ((1 << ghistoryBits) - 1);
 
      return;
